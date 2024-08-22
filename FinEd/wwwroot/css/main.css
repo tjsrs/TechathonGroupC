@@ -1,0 +1,28 @@
+﻿:root {
+    --primary-colour: #2C3E50;
+    --secondary-colour: #27AE60;
+}
+
+body {
+}
+
+
+.container {
+    margin: 20px auto;
+    max-width: 800px;
+    background-color:var(--secondary-colour)
+}
+
+.pension-summary, .pension-types, .pension-benefits, .pension-contributions, .pension-planning, .pension-faq {
+    margin-bottom: 30px;
+}
+
+h1, h2 {
+    color: #2C3E50;
+}
+
+p, ul {
+    font-size: 16px;
+    line-height: 1.6;
+}
+

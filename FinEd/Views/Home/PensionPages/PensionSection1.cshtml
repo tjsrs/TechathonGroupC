@@ -1,0 +1,76 @@
+﻿@page
+@model FinEd.Views.Home.PensionPages.PensionSection1Model
+@{
+
+}
+<div class="pension-summary">
+    <h2>What is a Pension?</h2>
+    <p>
+        A pension is a retirement plan that provides a monthly income after you retire. There are different types of pensions, including state pensions, workplace pensions, and personal pensions.
+    </p>
+</div>
+
+<div class="pension-types">
+    <h2>Types of Pensions</h2>
+    <ul>
+        <li><strong>State Pension:</strong> The regular payment provided by the government once you reach state pension age.</li>
+        <li><strong>Workplace Pension:</strong> A pension scheme arranged by your employer. It can be defined benefit or defined contribution.</li>
+        <li><strong>Personal Pension:</strong> A private pension that you arrange yourself, which can be contributed to even if you have other pension plans.</li>
+    </ul>
+</div>
+
+<form id="pensionQuiz">
+    <!-- Question -->
+    <div class="quiz-question">
+        <h3>1. What is a pension?</h3>
+        <div>
+            <input type="radio" id="q1a" name="q1" value="a">
+            <label for="q1a">A retirement plan that provides a monthly income after you retire.</label>
+        </div>
+        <div>
+            <input type="radio" id="q1b" name="q1" value="b">
+            <label for="q1b">A savings account for short-term goals.</label>
+        </div>
+        <div>
+            <input type="radio" id="q1c" name="q1" value="c">
+            <label for="q1c">A government bond.</label>
+        </div>
+    </div>
+    <button type="button" class="btn btn-primary mt-2" onclick="checkAnswers()">Submit Answer</button>
+</form>
+
+<a class="btn btn-primary mt-4" asp-controller="Home" asp-action="PensionSection2">Next Page</a>
+
+<style>
+    .btn {
+        margin-top: 20px;
+        padding: 10px 20px;
+        font-size: 16px;
+        text-align: center;
+        display: inline-block;
+        margin-right: 10px;
+        text-decoration: none;
+        border-radius: 5px;
+    }
+
+    .btn-primary {
+        background-color: #2C3E50;
+        color: white;
+        border: none;
+        transition: background-color 0.3s ease;
+    }
+</style>
+
+<script>
+    function checkAnswers() {
+        let score = 0;
+        const answer = document.querySelector('input[name="q1"]:checked');
+
+        if (answer && answer.value === "a") {
+            score++;
+            alert("Correct! A pension is a retirement plan that provides a monthly income after you retire.");
+        } else {
+            alert("Incorrect. Please review the content and try again.");
+        }
+    }
+</script>

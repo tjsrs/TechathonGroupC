@@ -1,0 +1,62 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+<div class="container text-center">
+    <h1>Congratulations!</h1>
+    <p class="lead">
+        You've successfully completed the Pensions module.
+    </p>
+    <p>
+        Understanding pensions is a significant step towards securing your financial future. Keep up the great work and continue expanding your financial knowledge.
+    </p>
+    <a href="@Url.Action("Index", "Home")" class="btn btn-primary">Return to Dashboard</a>
+    <a href="@Url.Action("NextModule", "Education")" class="btn btn-success">Start Next Module</a>
+</div>
+
+<style>
+    .container {
+        margin: 50px auto;
+        max-width: 600px;
+        padding: 20px;
+        background-color: #f9f9f9;
+        border-radius: 10px;
+        box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+        color: #27AE60;
+        font-size: 36px;
+        margin-bottom: 20px;
+    }
+
+    .lead {
+        font-size: 20px;
+        margin-bottom: 20px;
+        color: #2C3E50;
+    }
+
+    p {
+        font-size: 16px;
+        line-height: 1.6;
+        color: #2C3E50;
+    }
+
+    .btn {
+        margin-top: 20px;
+        padding: 10px 20px;
+        font-size: 16px;
+    }
+
+    .btn-primary {
+        background-color: #2C3E50;
+        border-color: #2C3E50;
+    }
+
+    .btn-success {
+        background-color: #27AE60;
+        border-color: #27AE60;
+    }
+</style>

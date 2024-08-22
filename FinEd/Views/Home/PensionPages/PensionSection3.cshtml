@@ -1,0 +1,111 @@
+﻿@page
+@model FinEd.Views.Home.PensionPages.PensionSection3Model
+@{
+}
+
+<div class="container">
+    <h1>Pensions Overview</h1>
+
+    <div class="pension-summary">
+        <h2>What is a Pension?</h2>
+        <p>
+            A pension is a retirement plan that provides a monthly income after you retire. There are different types of pensions, including state pensions, workplace pensions, and personal pensions.
+        </p>
+    </div>
+
+    <div class="pension-types">
+        <h2>Types of Pensions</h2>
+        <ul>
+            <li><strong>State Pension:</strong> The regular payment provided by the government once you reach state pension age.</li>
+            <li><strong>Workplace Pension:</strong> A pension scheme arranged by your employer. It can be defined benefit or defined contribution.</li>
+            <li><strong>Personal Pension:</strong> A private pension that you arrange yourself, which can be contributed to even if you have other pension plans.</li>
+        </ul>
+    </div>
+
+    <div class="pension-benefits">
+        <h2>Benefits of Pensions</h2>
+        <ul>
+            <li>Provides financial security in retirement.</li>
+            <li>Many pensions are tax-advantaged, meaning you can save on taxes.</li>
+            <li>Potential employer contributions in workplace pensions.</li>
+        </ul>
+    </div>
+
+    <div class="pension-contributions">
+        <h2>Pension Contributions</h2>
+        <p>
+            It's important to regularly contribute to your pension throughout your working life. Contributions may come from your salary, your employer, and government incentives.
+        </p>
+    </div>
+
+    <div class="pension-planning">
+        <h2>Pension Planning</h2>
+        <p>
+            Proper planning is crucial to ensure you have enough income to support your lifestyle in retirement. Consider factors like your desired retirement age, lifestyle, and any other income sources.
+        </p>
+    </div>
+
+    <div class="pension-faq">
+        <h2>Frequently Asked Questions</h2>
+        <ul>
+            <li><strong>How much should I contribute to my pension?</strong> It depends on your income, retirement goals, and age. A financial advisor can help you determine the best amount.</li>
+            <li><strong>When can I access my pension?</strong> This depends on the type of pension you have. Generally, pensions can be accessed from age 55, but this may vary.</li>
+            <li><strong>What happens to my pension if I change jobs?</strong> You can usually transfer your workplace pension to your new employer's scheme or a personal pension.</li>
+        </ul>
+
+       
+    </div>
+
+    <div class="container mt-5">
+        <!-- Question 3 -->
+        <div class="quiz-question">
+            <h3>3. Which of the following is a benefit of pensions?</h3>
+            <div>
+                <input type="radio" id="q3a" name="q3" value="a">
+                <label for="q3a">Provides financial security in retirement.</label>
+            </div>
+            <div>
+                <input type="radio" id="q3b" name="q3" value="b">
+                <label for="q3b">Increases your monthly expenses significantly.</label>
+            </div>
+            <div>
+                <input type="radio" id="q3c" name="q3" value="c">
+                <label for="q3c">Is only available to government employees.</label>
+            </div>
+            <button type="button" class="btn btn-primary mt-2" onclick="checkAnswers()">Submit Answer</button>
+        </div>
+    </div>
+    <a class="btn btn-primary" asp-controller="Home" asp-action="PensionComplete">Finish</a>
+</div>
+
+<style>
+    .btn {
+        margin-top: 20px;
+        padding: 10px 20px;
+        font-size: 16px;
+        text-align: center;
+        display: inline-block;
+        margin-right: 10px;
+        text-decoration: none;
+        border-radius: 5px;
+    }
+
+    .btn-primary {
+        background-color: #2C3E50;
+        color: white;
+        border: none;
+        transition: background-color 0.3s ease;
+    }
+</style>
+
+<script>
+    function checkAnswers() {
+        const answer = document.querySelector('input[name="q3"]:checked');
+
+        if (answer && answer.value === "a") {
+            alert("Correct! Pensions provide financial security in retirement.");
+        } else {
+            alert("Incorrect. Please review the benefits of pensions and try again.");
+        }
+    }
+</script>

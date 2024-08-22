@@ -1,0 +1,55 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="container mt-5">
+    <div class="jumbotron text-center bg-success text-white py-5 rounded">
+        <h1 class="display-4">Welcome To FinEd</h1>
+        <p class="lead">Your path to financial literacy starts here.</p>
+    </div>
+
+    <div class="text-left mt-4">
+        <h3 class="mb-4">Learn about:</h3>
+        <div class="row">
+            <div class="col-md-3">
+                <div class="card h-100 shadow-sm">
+                    <div class="card-body text-center">
+                        <i class="fas fa-piggy-bank fa-2x text-success mb-3"></i>
+                        <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="Pension"><h5 class="card-title text-secondary">Pensions</h5></a>
+                        <p class="card-text text-muted">Understand how pensions work and how to secure your retirement.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card h-100 shadow-sm">
+                    <div class="card-body text-center">
+                        <i class="fas fa-home fa-2x text-success mb-3"></i>
+                        <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="Mortgages"><h5 class="card-title text-secondary">Mortgages</h5></a>
+                        <p class="card-text text-muted">Learn the ins and outs of home financing and mortgage options.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card h-100 shadow-sm">
+                    <div class="card-body text-center">
+                        <i class="fas fa-chart-line fa-2x text-success mb-3"></i>
+                        <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="Savings"><h5 class="card-title text-secondary">Savings/Investment</h5></a>
+                        <p class="card-text text-muted">Discover strategies to grow your wealth through smart saving and investing.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card h-100 shadow-sm">
+                    <div class="card-body text-center">
+                        <i class="fas fa-file-invoice-dollar fa-2x text-success mb-3"></i>
+                        <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="Tax"><h5 class="card-title text-secondary">Tax</h5></a>
+                        <p class="card-text text-muted">Get the knowledge you need to navigate taxes and maximize your returns.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Add Font Awesome for icons (if not already included) -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">

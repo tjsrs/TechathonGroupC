@@ -1,0 +1,90 @@
+﻿@page
+@model FinEd.Views.Home.PensionPages.PensionSection2Model
+@{
+
+}
+<div class="pension-benefits">
+    <h2>Benefits of Pensions</h2>
+    <ul>
+        <li>Provides financial security in retirement.</li>
+        <li>Many pensions are tax-advantaged, meaning you can save on taxes.</li>
+        <li>Potential employer contributions in workplace pensions.</li>
+    </ul>
+</div>
+
+<div class="pension-contributions">
+    <h2>Pension Contributions</h2>
+    <p>
+        It's important to regularly contribute to your pension throughout your working life. Contributions may come from your salary, your employer, and government incentives.
+    </p>
+</div>
+
+<div class="pension-planning">
+    <h2>Pension Planning</h2>
+    <p>
+        Proper planning is crucial to ensure you have enough income to support your lifestyle in retirement. Consider factors like your desired retirement age, lifestyle, and any other income sources.
+    </p>
+</div>
+
+<div class="pension-faq">
+    <h2>Frequently Asked Questions</h2>
+    <ul>
+        <li><strong>How much should I contribute to my pension?</strong> It depends on your income, retirement goals, and age. A financial advisor can help you determine the best amount.</li>
+        <li><strong>When can I access my pension?</strong> This depends on the type of pension you have. Generally, pensions can be accessed from age 55, but this may vary.</li>
+        <li><strong>What happens to my pension if I change jobs?</strong> You can usually transfer your workplace pension to your new employer's scheme or a personal pension.</li>
+    </ul>
+    
+</div>
+
+<div class="container mt-5">
+    <!-- Question 2 -->
+    <div class="quiz-question">
+        <h3>2. Which of the following is NOT a type of pension?</h3>
+        <div>
+            <input type="radio" id="q2a" name="q2" value="a">
+            <label for="q2a">State Pension</label>
+        </div>
+        <div>
+            <input type="radio" id="q2b" name="q2" value="b">
+            <label for="q2b">Workplace Pension</label>
+        </div>
+        <div>
+            <input type="radio" id="q2c" name="q2" value="c">
+            <label for="q2c">Investment Pension</label>
+        </div>
+        <button type="button" class="btn btn-primary mt-2" onclick="checkAnswers()">Submit Answer</button>
+    </div>
+    <a class="btn btn-primary" asp-controller="Home" asp-action="PensionSection3">Next</a>
+</div>
+
+<style>
+    .btn {
+        margin-top: 20px;
+        padding: 10px 20px;
+        font-size: 16px;
+        text-align: center;
+        display: inline-block;
+        margin-right: 10px;
+        text-decoration: none;
+        border-radius: 5px;
+    }
+
+    .btn-primary {
+        background-color: #2C3E50;
+        color: white;
+        border: none;
+        transition: background-color 0.3s ease;
+    }
+</style>
+
+<script>
+    function checkAnswers() {
+        const answer = document.querySelector('input[name="q2"]:checked');
+
+        if (answer && answer.value === "c") {
+            alert("Correct! Investment Pension is not a standard type of pension.");
+        } else {
+            alert("Incorrect. Please review the types of pensions and try again.");
+        }
+    }
+</script>
